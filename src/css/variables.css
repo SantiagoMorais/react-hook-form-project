@@ -1,0 +1,9 @@
+:root {
+    --shadow: rgba(0,0,0,.5);
+    --main-color: #B19470;
+    --secondary-color: #76453B;
+    --button-color: #43766C;
+    --letter-color: #F8FAE5;
+    --filled-color: #16FF00;
+    --error-color: #B80000;
+}

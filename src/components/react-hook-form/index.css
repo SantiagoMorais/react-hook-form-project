@@ -1,0 +1,92 @@
+.form {
+    background: url(../../images/png.png) var(--main-color) no-repeat center center;
+    background-size: 100%;
+    max-width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    justify-content: space-between;
+}
+
+.form .field,
+.form .text-area {
+    border: 1px solid transparent;
+    background-color: var(--secondary-color);
+    color: var(--letter-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.form .field:-webkit-auto {
+    background-color: none;
+}
+
+.form .field::placeholder,
+.form .text-area::placeholder {
+    color: var(--letter-color);
+    opacity: .8;
+}
+
+.form .field:focus,
+.form .text-area:focus {
+    outline-style: double;
+    outline-color: var(--placeholder-color);
+}
+
+.form .text-area {
+    height: 100px;
+    resize: none;
+}
+
+.form .errorMessage {
+    width: 100vh;
+    height: 20px;
+    position: relative;
+}
+
+.form .errorMessage p {
+    position: absolute;
+    top: 0;
+    color: var(--error-color);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form .submitButton {
+    align-self: center;
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--letter-color);
+    background-color: var(--button-color);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 15px var(--secondary-color);
+    border-color: var(--letter-color);
+}
+
+/*JS FIELD CHECK*/
+
+.field.required-field,
+.text-area.required-field {
+    border: 1px solid var(--letter-color);
+    box-shadow: 0 0 8px var(--error-color);
+}
+
+.field.filled-field,
+.text-area.filled-field {
+    border: 1px solid var(--letter-color);
+    box-shadow: 0 0 8px var(--filled-color);
+}
